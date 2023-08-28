@@ -1,0 +1,81 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #135, #478);
+}
+
+.container {
+  width: 30%;
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+  gap: 15px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  opacity: 0.5;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.menu i {
+  transition: 0.3s;
+}
+
+.menu.rotate .arrow {
+  transform: rotate(180deg);
+}
+
+.listes {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: height 0.3s linear;
+  height: 0;
+  overflow: hidden;
+}
+
+.listes.show {
+  height: 183.6px;
+  overflow: visible;
+}
+
+.listes li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.listes li:hover {
+  background-color: #ccc;
+  padding-left: 20px;
+}
